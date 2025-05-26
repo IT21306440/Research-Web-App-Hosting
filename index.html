@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <!-- Import Fontawesome -->
+  <script src="https://kit.fontawesome.com/ee2c6a13c7.js" crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="./Images/logo.png">
+  <link rel="stylesheet" href="Footer.css" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="Milestone.css" />
+  <title>Solar Smart</title>
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Solar Smart</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#Home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Introduction">Introduction</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Domain">Domain</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Milestones">Milestones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Provide">What do we provide</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Documents">Documents</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Tools">Tools and Technologies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Achievements">Achievements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Team">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    // Get all the nav links
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+
+    // Function to remove active class from all nav links
+    function removeActiveClass() {
+      navLinks.forEach(nav => nav.classList.remove('active'));
+    }
+
+    // Add click event listener to each link
+    navLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        // Remove active class from all nav links
+        removeActiveClass();
+        // Add active class to the clicked link
+        this.classList.add('active');
+      });
+    });
+
+    // Function to add active class based on scroll position
+    function setActiveLink() {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          const id = section.getAttribute('id');
+          removeActiveClass();
+          document.querySelector(`a[href="#${id}"]`).classList.add('active');
+        }
+      });
+    }
+
+    // Add scroll event listener
+    window.addEventListener('scroll', setActiveLink);
+  </script>
+
+  <section id="Home">
+    <div class="section-body container">
+      <div class="row h-100 justify-content-center align-items-center">
+        <div class="text-center">
+          <img style="margin-top: -90px;" src="./Images/logo.png" class="img-fluid rounded" />
+          <p class="display-6" style="margin-top: -60px; color: #28a745; font-weight: bold; font-size: 30px;">
+            Solar Smart <br />
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Two Component -->
+  <section id="Introduction" class="section-body section-2 h-100">
+    <header class="container h-100">
+      <div class="d-flex align-items-center justify-content-center h-100">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom" style="color: #28a745;">Who are Solar Smart?</p>
+          <p class="display-6 custom-display-6" style="color: #333;">
+            Welcome to Solar Smart, a forward-thinking initiative dedicated to supporting national energy transformation through AI-driven innovation. Our integrated platform empowers the Ceylon Electricity Board with advanced tools for solar irradiance forecasting, segmented demand prediction, optimized battery storage, predictive maintenance, and intelligent site selection. Designed to enhance grid reliability, reduce operational costs, and align with Sri Lanka’s renewable energy goals, our system delivers real-time, data-backed insights for strategic energy planning. Together, we can shape a smarter, more sustainable energy future.
+          </p>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Our Domain Component -->
+  <section id="Domain" class="section-body-3 section-3 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-3 fw-bolder title-top-bottom">Our Domain</p>
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item section-2 accordion-section accordion-row">
+              <h2 class="accordion-header accordion-row" id="flush-headingOne">
+                <button class="accordion-button collapsed accordion-header-section accordion-row" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                  aria-controls="flush-collapseOne">
+                  <i class="fa-sharp fa-solid fa-book"></i> &nbsp; Background
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse accordion-row"
+                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body accordion-row text-start">
+                  <i class="fa-solid fa-bars-staggered"></i> &nbsp; The rapid rise in solar energy adoption has introduced new challenges in ensuring efficient generation, distribution, and maintenance of power systems. With increasing amounts of data from solar plants, weather stations, and energy grids, traditional energy management methods are struggling to keep up with the complexity and scale of operations.
+                  <br><br>
+                  This is where artificial intelligence (AI), machine learning (ML), and deep learning (DL) come into play. These technologies offer advanced capabilities in forecasting solar irradiance, predicting energy demand, optimizing battery storage, and automating solar panel maintenance. By analyzing complex datasets and learning patterns over time, AI-based systems can make faster and more accurate decisions than manual methods.
+                  <br><br>
+                  Integrating these smart solutions into energy systems not only improves reliability and efficiency but also supports long-term goals for sustainability, cost savings, and national energy security. As Sri Lanka pushes toward renewable energy targets, data-driven innovation becomes essential for powering a smarter future.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item section-2 accordion-section accordion-row">
+              <h2 class="accordion-header accordion-row" id="flush-headingTwo">
+                <button class="accordion-button collapsed accordion-header-section accordion-row" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                  aria-controls="flush-collapseTwo">
+                  <i class="fa-sharp fa-solid fa-arrows-left-right-to-line"></i> &nbsp; Research Gap
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse accordion-row"
+                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body accordion-row text-start">
+                  <i class="fa-solid fa-bars-staggered"></i> &nbsp; Although AI is transforming solar energy systems, there are still important challenges to overcome. Many existing tools cannot accurately predict solar energy levels because they don’t fully consider seasonal changes or sudden weather shifts. Likewise, current energy demand predictions often ignore real-world factors like population growth or economic activity, making them less reliable.
+                  <br><br>
+                  Battery systems are also a concern. Most still use fixed rules and can’t adapt in real time, which leads to wasted energy and shorter battery life. When it comes to solar panel maintenance, many systems fail to properly combine data from images, sensors, and repair logs. Lastly, some AI models make decisions that are hard to explain, which can be risky in national energy planning.
+                  <br><br>
+                  Our research aims to fix these gaps by building smarter, more flexible forecasting models, improving battery management with real-time decision-making, and adding explainable AI so that system outputs are easier to understand and trust.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item section-2 accordion-section">
+              <h2 class="accordion-header accordion-row" id="flush-headingThree">
+                <button class="accordion-button collapsed accordion-header-section accordion-row" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false"
+                  aria-controls="flush-collapseThree">
+                  <i class="fa-sharp fa-solid fa-circle-exclamation"></i> &nbsp; Research Problems
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse accordion-row"
+                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body accordion-row text-start">
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp; Many solar irradiance forecasting models lack accuracy due to limited consideration of seasonal shifts and real-time weather anomalies.</p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp; Traditional demand forecasting models fail to integrate socio-economic indicators, leading to unreliable long-term energy predictions.</p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp; Static battery control strategies are inefficient in adapting to real-time energy cost fluctuations and solar output variability.</p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp; Maintenance systems struggle to fuse data from thermal images, sensor logs, and maintenance records for accurate fault detection.</p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp; Many AI models used in solar optimization lack transparency, making their predictions difficult to interpret and trust in operational settings.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item section-2 accordion-section">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button collapsed accordion-header-section accordion-row" type="button"
+                  data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false"
+                  aria-controls="flush-collapseFour">
+                  <i class="fa-solid fa-bullseye"></i> &nbsp; Research Objectives
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse accordion-row"
+                aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body accordion-row text-start">
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp; Develop advanced machine learning models (e.g., LSTM, XGBoost, PatchTST) to accurately forecast solar irradiance under varying weather and seasonal conditions.</p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp; Build a hybrid forecasting model that integrates economic, demographic, and climatic data to predict energy demand across different time segments (peak, off-peak, daytime).</p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp; Design and evaluate optimization algorithms (GA, PSO, DDPG, MORL) for intelligent battery charge-discharge scheduling to improve energy efficiency and reduce costs.</p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp; Create a predictive maintenance system using thermal image analysis and time-series sensor data to detect faults and reduce downtime in solar power systems.</p>
+                  <p><i class="fa-solid fa-bars-staggered"></i> &nbsp; Incorporate explainable AI (XAI) techniques such as SHAP and LIME to make model decisions transparent, interpretable, and trustworthy for real-world energy applications.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Milestones Component -->
+  <section id="Milestones" class="section-body-3 section-2 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-3 fw-bolder title-top-bottom">Milestones</p>
+          <div class="container">
+            <div class="main-timeline">
+              <!-- Project Topic Assessment -->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">January</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">Project Topic Assessment (No marks allocated)</h5>
+                  <p class="description">
+                    Initial topic assessment document of the proposed research was submitted for evaluation. The submitted document included a brief overview on key aspects of the proposed research along with the research problem, research objectives, overall solution, and member task breakdown.
+                  </p>
+                </div>
+              </div>
+              <!-- Topic Assessment Form -->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">May</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">Topic Assessment Form (No marks allocated)</h5>
+                  <p class="description">
+                    Once the topic was finalized, the Topic Assessment Form was submitted for evaluation. This document also included a brief overview on key aspects of the proposed research along with the research problem, research objectives, overall solution, and member task breakdown of the proposed research.
+                  </p>
+                </div>
+              </div>
+              <!-- Project Proposal Presentation -->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">July</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">Project Proposal Presentation (Marks Allocation - 5%)</h5>
+                  <p class="description">
+                    Presented to a panel of judges to provide an overview of the proposed research.
+                  </p>
+                </div>
+              </div>
+              <!-- Project Proposal Report -->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">August</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">Project Proposal Report (Marks Allocation - 7%)</h5>
+                  <p class="description">
+                    Submission of a report providing an in-depth analysis of key aspects of the proposed research, including the research problem, objectives, and overall proposed solution.
+                  </p>
+                </div>
+              </div>
+              <!-- Status Document 1 -->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">December</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">Status Document 1 (Marks Allocation - 1%)</h5>
+                  <p class="description">
+                    Submission of a document providing an overview of key tasks conducted by members during the implementation phase of the research.
+                  </p>
+                </div>
+              </div>
+              <!-- Progress Presentation 1 -->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">December</span>
+                      <span class="year">2024</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">Progress Presentation 1 (Marks Allocation - 15%)</h5>
+                  <p class="description">
+                    Evaluation of 50% completion of the proposed solution by a panel of judges.
+                  </p>
+                </div>
+              </div>
+              <!-- Research Paper Draft Submission -->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">March</span>
+                      <span class="year">2025</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">Research Paper Draft Submission (Marks Allocation - 10%)</h5>
+                  <p class="description">
+                    Draft submission of the research paper submitted to the supervisor for evaluation.
+                  </p>
+                </div>
+              </div>
+              <!-- Final Report Submission -->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">April</span>
+                      <span class="year">2025</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">Final Report Submission (Marks Allocation - 19%)</h5>
+                  <p class="description">
+                    Submission of the group and individual thesis documents for evaluation.
+                  </p>
+                </div>
+              </div>
+              <!-- Progress Presentation 2 -->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">March</span>
+                      <span class="year">2025</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">Progress Presentation 2 (Marks Allocation - 18%)</h5>
+                  <p class="description">
+                    Evaluation of 90% completion of the proposed solution by a panel of judges.
+                  </p>
+                </div>
+              </div>
+              <!-- Website Assessment -->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">May</span>
+                      <span class="year">2025</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">Website Assessment (Marks Allocation - 2%)</h5>
+                  <p class="description">
+                    Submission of research website for evaluation.
+                  </p>
+                </div>
+              </div>
+              <!-- Log Book and Status Document 2 -->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">June</span>
+                      <span class="year">2025</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">Log Book and Status Document 2 (Marks Allocation - 4%)</h5>
+                  <p class="description">
+                    Submission of the research logbook and status document 2, providing an overview of all key tasks conducted by members during the implementation phase of the research.
+                  </p>
+                </div>
+              </div>
+              <!-- Final Presentation and Viva -->
+              <div class="timeline">
+                <div class="icon"></div>
+                <div class="date-content">
+                  <div class="date-outer">
+                    <span class="date">
+                      <span class="month">May</span>
+                      <span class="year">2025</span>
+                    </span>
+                  </div>
+                </div>
+                <div class="timeline-content">
+                  <h5 class="title">Final Presentation and Viva (Marks Allocation - 20%)</h5>
+                  <p class="description">
+                    Final evaluation of the completed product.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- What do we provide Component -->
+  <section id="Provide" class="section-3 section-body-3 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom">What do we provide?</p>
+          <div class="row">
+            <!-- Solar Irradiance Forecasting -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Solar Irradiance Forecasting</h5>
+                  <br />
+                  <i class="fa-solid fa-sun fa-2xl"></i>
+                  <br /><br />
+                  <p class="card-text">
+                    Predict solar power generation using multivariate time series models. Our hybrid LSTM and XGBoost models offer accurate short- and long-term forecasts by analyzing weather patterns, seasonal changes, and historical irradiance data.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Energy Demand Forecasting -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Energy Demand Forecasting</h5>
+                  <br />
+                  <i class="fa-solid fa-chart-line fa-2xl"></i>
+                  <br /><br />
+                  <p class="card-text">
+                    Forecast energy consumption across peak, off-peak, and daytime periods using AI models. Our system combines machine learning with socio-economic indicators for better alignment between solar supply and national grid demand.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Smart Battery Optimization -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Smart Battery Optimization</h5>
+                  <br />
+                  <i class="fa-solid fa-battery-half fa-2xl"></i>
+                  <br /><br />
+                  <p class="card-text">
+                    Optimize energy storage with real-time decision-making using GA, PSO, and reinforcement learning. This system improves battery life, stabilizes grid operations, and reduces costs by adapting to dynamic market and weather conditions.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Predictive Maintenance -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Predictive Maintenance</h5>
+                  <br />
+                  <i class="fa-solid fa-screwdriver-wrench fa-2xl"></i>
+                  <br /><br />
+                  <p class="card-text">
+                    Detect faults in solar infrastructure using AI-powered image analysis and sensor data. Our system helps reduce downtime and repair costs by identifying dust, thermal anomalies, and inverter faults before they escalate.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Documents Component -->
+  <section id="Documents" class="section-2 section-body-3 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom">Documents</p>
+          <!-- Project Proposals -->
+          <div class="row">
+            <p class="sub-heading-3">Project Proposal</p>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Proposal Presentation - Team</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://docs.google.com/presentation/d/1Qzu3PlXztaUAgSkT_YR-VvE56k8wYhN6/edit?usp=sharing&ouid=104343492644263777206&rtpof=true&sd=true"
+                    target="_blank"><button class="btn btn-light" style="background-color: #28a745; color: #fff;">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Proposal Document - Janindu Senarath</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1gqZqAWhW3eqvpk-eh_GQjUJAwu3UWr43/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light" style="background-color: #28a745; color: #fff;">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Proposal Document - Randuni Muthukumari</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1m7QxMs82jFkCCs6VyqMOYGYUxehm-x5e/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light" style="background-color: #28a745; color: #fff;">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Proposal Document - Bhanuka Nanayakkara</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1MrJ4Afcud1jg4tp1SwsQ4up5-J5EYohg/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light" style="background-color: #28a745; color: #fff;">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Proposal Document - Parindi Weerasekara</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1f162YiARrLzQClRvZf3hpyWWuvubq4dW/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light" style="background-color: #28a745; color: #fff;">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Check list Documents -->
+          <div class="row">
+            <p class="sub-heading-3">Check list Documents</p>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Literary Review</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://docs.google.com/spreadsheets/d/1LnAXpoqk8Xt13eoEl0ZEV1QiW3TGM3Of/edit?usp=sharing&ouid=104343492644263777206&rtpof=true&sd=true"
+                    target="_blank"><button class="btn btn-light" style="background-color: #28a745; color: #fff;">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Data Analysis Report</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://docs.google.com/document/d/1HkrycslMcchV_hEVbsLhsp3godB0iqPc/edit?usp=sharing&ouid=104343492644263777206&rtpof=true&sd=true"
+                    target="_blank"><button class="btn btn-light" style="background-color: #28a745; color: #fff;">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Ethical Analysis Report</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1WhOW-3D54E2IUbZ2ecUZDRb5vv74IBf8/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light" style="background-color: #28a745; color: #fff;">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">MLOps Report</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/19x0GgCIIUfsfqhS4rO3o0eddgwTxyAl5/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light" style="background-color: #28a745; color: #fff;">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Progress Presentation 01 -->
+          <div class="row">
+            <p class="sub-heading-3">Progress Presentation 01</p>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Progress Presentation 01</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://docs.google.com/presentation/d/1MiRE-rzPcUci7b31cCBC6-DAZ7BsqHNc/edit?usp=sharing&ouid=104343492644263777206&rtpof=true&sd=true"
+                    target="_blank"><button class="btn btn-light" style="background-color: #28a745; color: #fff;">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Progress Presentation 02 -->
+          <div class="row">
+            <p class="sub-heading-3">Progress Presentation 02</p>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Progress Presentation 02</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://docs.google.com/presentation/d/19PC5y6nhSwS15ZfajGBqSOffgRU0DbUA/edit?usp=sharing&ouid=104343492644263777206&rtpof=true&sd=true"
+                    target="_blank"><button class="btn btn-light" style="background-color: #28a745; color: #fff;">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Final Presentation -->
+          <div class="row">
+            <p class="sub-heading-3">Final Presentation</p>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Final Presentation</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1zl2K9Q0anrWl-7sk9S1bFApF56HvHwGp/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light" style="background-color: #28a745; color: #fff;">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Final Reports -->
+          <div class="row">
+            <p class="sub-heading-3">Final Reports</p>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Final Report - Janindu Senarath (IT21306440)</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1bqvTZQclrlwisAJSMax-fqnPg8GViWu5/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light" style="background-color: #28a745; color: #fff;">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Final Report - Randuni Muthukumari</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1BLsy0NjlNEZVhkS35ENfx17WkO4mtGz1/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light" style="background-color: #28a745; color: #fff;">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Final Report - Bhanuka Nanayakkara (IT21329760)</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/138SbJSOWn_FSXdlwINk-p__Dt2IHWa3B/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light" style="background-color: #28a745; color: #fff;">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Final Report - Parindi Weerasekara</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1RCLFshX1ZwI38rr3j4tllZt2iK6LiHKA/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light" style="background-color: #28a745; color: #fff;">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project Registration Documents -->
+          <div class="row">
+            <p class="sub-heading-3">Project Registration Documents</p>
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Topic Assessment Form (TAF)</h5>
+                  <br />
+                  <i class="fa-solid fa-file-pdf fa-5x"></i>
+                  <br /><br />
+                  <a href="https://drive.google.com/file/d/1NfxRIBMKJctwBv2qYBVBzmpiI_jiFrjR/view?usp=sharing"
+                    target="_blank"><button class="btn btn-light" style="background-color: #28a745; color: #fff;">DOWNLOAD</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Tools and Technologies Component -->
+  <section id="Tools" class="section-body-3 section-3 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom">Tools and Technologies</p>
+          <div class="row">
+            <!-- Python -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Python</h5>
+                  <br />
+                  <i class="fa-brands fa-python fa-5x"></i>
+                  <br /><br />
+                  <p class="card-text">Used as the core programming language for data preprocessing, modeling, dashboard logic, and integration of all modules.</p>
+                </div>
+              </div>
+            </div>
+            <!-- TensorFlow -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">TensorFlow</h5>
+                  <br />
+                  <i class="fa-solid fa-brain fa-5x"></i>
+                  <br /><br />
+                  <p class="card-text">Utilized to build deep learning models for solar irradiance forecasting and inverter fault detection using LSTM and autoencoders.</p>
+                </div>
+              </div>
+            </div>
+            <!-- PyTorch -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">PyTorch</h5>
+                  <br />
+                  <i class="fa-solid fa-fire fa-5x"></i>
+                  <br /><br />
+                  <p class="card-text">Applied in transformer-based models like PatchTST and Vision Transformers for thermal anomaly detection and time-series forecasting.</p>
+                </div>
+              </div>
+            </div>
+            <!-- XGBoost -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">XGBoost</h5>
+                  <br />
+                  <i class="fa-solid fa-bolt fa-5x"></i>
+                  <br /><br />
+                  <p class="card-text">Used for hybrid modeling with LSTM to improve solar irradiance and demand forecasting accuracy.</p>
+                </div>
+              </div>
+            </div>
+            <!-- OpenAI Gym -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">OpenAI Gym</h5>
+                  <br />
+                  <i class="fa-solid fa-cube fa-5x"></i>
+                  <br /><br />
+                  <p class="card-text">Used to simulate environments for reinforcement learning-based battery storage optimization (DDPG, MORL).</p>
+                </div>
+              </div>
+            </div>
+            <!-- Scikit-learn -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Scikit-learn</h5>
+                  <br />
+                  <i class="fa-solid fa-gears fa-5x"></i>
+                  <br /><br />
+                  <p class="card-text">Used for preprocessing, feature selection, Random Forest modeling, and Isolation Forest-based anomaly detection.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Azure SQL -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Azure SQL</h5>
+                  <br />
+                  <i class="fa-solid fa-database fa-5x"></i>
+                  <br /><br />
+                  <p class="card-text">Cloud-based database for storing preprocessed data, model outputs, cost records, and solar metadata across modules.</p>
+                </div>
+              </div>
+            </div>
+            <!-- Plotly Dash -->
+            <div class="col-sm-12 col-md-4 col-lg-3 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Plotly Dash</h5>
+                  <br />
+                  <i class="fa-solid fa-chart-pie fa-5x"></i>
+                  <br /><br />
+                  <p class="card-text">Used to create the interactive dashboard that integrates all modules for CEB decision-making and visualization.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Achievements Component -->
+  <section id="Achievements" class="section-body-3 section-2 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom">Achievements</p>
+          <div class="row">
+            <!-- ICCMM 2025 -->
+            <div class="col-12 p-3">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h2 class="card-title">ICCMM 2025</h2>
+                  <br />
+                  <i class="fa-solid fa-medal fa-5x"></i>
+                  <br /><br />
+                  <p class="card-text">
+                    Our research paper on AI-driven solar energy optimization was successfully presented at the International Conference on Computing, Materials & Manufacturing (ICCMM) 2025. The paper has been submitted to the <em>Springer Studies in Autonomic, Data-driven and Industrial Computing</em> series and is currently under peer review.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Team Component -->
+  <section id="Team" class="section-body-3 section-3 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom">Team</p>
+          <div class="row">
+            <!-- Samadhi Rathnayake -->
+            <div class="col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Mr. Samadhi Rathnayake <br /> (Supervisor)</h5>
+                  <br />
+                  <img src="./Images/Team/Samadi.jpg" class="team-member-image img-fluid rounded" />
+                  <br /><br />
+                  <a href="https://www.linkedin.com/in/samadhi-chathuranga-rathnayake/" class="social-icons" target="_blank"><i
+                      class="fa-brands fa-linkedin fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Pipuni Wijesiri -->
+            <div class="col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Ms. Pipuni Wijesiri <br /> (Co-Supervisor)</h5>
+                  <br />
+                  <img src="./Images/Team/Pipuni.jpg" class="team-member-image img-fluid rounded" />
+                  <br /><br />
+                  <a href="https://www.linkedin.com/in/pipuni-wijesiri-9a7943144/?originalSubdomain=lk/" class="social-icons"
+                    target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Mahil Fernando -->
+            <div class="col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Mr. Mahil Fernando <br /> (External-Supervisor)</h5>
+                  <br />
+                  <img src="./Images/Team/Mahil.jpg" class="team-member-image img-fluid rounded" />
+                  <br /><br />
+                  <a href="https://www.linkedin.com/in/mahilfernando/" class="social-icons"
+                    target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Janindu Senarath -->
+            <div class="col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Janindu Senarath <br /> (Leader)</h5>
+                  <br />
+                  <img src="./Images/Team/Janidu.jpg" class="team-member-image img-fluid rounded" />
+                  <br /><br />
+                  <a href="https://www.linkedin.com/in/anuththara-divyanjalie-628765213/" class="social-icons"
+                    target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Randuni Muthukumari -->
+            <div class="col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Randuni Muthukumari</h5>
+                  <br />
+                  <img src="./Images/Team/Randuni.jpg" class="team-member-image img-fluid rounded" />
+                  <br /><br />
+                  <a href="https://www.linkedin.com/in/randuni-vimasha-b9808426a/" class="social-icons"
+                    target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Bhanuka Nanayakkara -->
+            <div class="col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Bhanuka Nanayakkara</h5>
+                  <br />
+                  <img src="./Images/Team/bhanuka.jpg" class="team-member-image img-fluid rounded" />
+                  <br /><br />
+                  <a href="https://www.linkedin.com/in/bhanuka-subhash/" class="social-icons" target="_blank"><i
+                      class="fa-brands fa-linkedin fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+            <!-- Parindi Weerasekara -->
+            <div class="col-lg-3 p-3 d-flex align-items-stretch">
+              <div class="card card-section">
+                <div class="card-body">
+                  <h5 class="card-title">Parindi Weerasekara</h5>
+                  <br />
+                  <img src="./Images/Team/parindi.jpg" class="team-member-image img-fluid rounded" />
+                  <br /><br />
+                  <a href="https://www.linkedin.com/in/parindi/" class="social-icons"
+                    target="_blank"><i class="fa-brands fa-linkedin fa-2x"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Contact Component -->
+  <section id="Contact" class="section-body-3 section-2 section-top-bottom">
+    <header class="container">
+      <div class="d-flex align-items-center justify-content-center">
+        <div class="d-flex flex-column text-center">
+          <p class="display-2 fw-bolder title-top-bottom">Contact</p>
+          <div class="row contactus">
+            <!-- Contact -->
+            <div class="col-12">
+              <div class="card card-section">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <form>
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Email address</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Inquiry</label>
+                          <input type="text" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="background-color: #28a745; border-color: #28a745;">Submit</button>
+                      </form>
+                    </div>
+                    <div class="col-md-6">
+                      <p class="card-text">Please contact us for any clarification</p>
+                      <p class="card-text">jsenarathhh@gmail.com</p>
+                      <p class="card-text">+94 77 245 1893</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-4 flex-shrink-0 section-top-bottom">
+    <div class="container py-4">
+      <div class="row gy-4">
+        <div class="col-lg-4 col-md-6">
+          <h5 class="h1 text-white">Solar Smart</h5>
+          <p class="small text-muted mb-0">
+            © Copyrights. All rights reserved.
+          </p>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-white mb-3">Quick links</h5>
+          <ul class="list-unstyled text-muted">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Introduction">Introduction</a></li>
+            <li><a href="#Domain">Domain</a></li>
+            <li><a href="#Milestones">Milestones</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-2 col-md-6">
+          <h5 class="text-white mb-3">Quick links</h5>
+          <ul class="list-unstyled text-muted">
+            <li><a href="#Documents">Documents</a></li>
+            <li><a href="#Tools">Tools</a></li>
+            <li><a href="#Team">Team</a></li>
+            <li><a href="#Contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4 col-md-6">
+          <h5 class="text-white mb-3">Newsletter</h5>
+          <p class="small text-muted">
+            Subscribe to our newsletter for more information
+          </p>
+          <form action="#">
+            <div class="input-group mb-3">
+              <input class="form-control" type="text" placeholder="Recipient's username"
+                aria-label="Recipient's username" aria-describedby="button-addon2" />
+              <button class="btn btn-primary" id="button-addon2" type="button" style="background-color: #28a745; border-color: #28a745;">
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+</body>
+</html>

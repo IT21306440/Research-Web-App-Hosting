@@ -1,0 +1,49 @@
+/* ==========================================
+    FOR DEMO PURPOSE
+  ========================================== */
+body {
+  background-image: url('Images/solar_background.jpg'); /* Renewable energy-themed image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333; /* Darker text for readability */
+  padding: 50px 0;
+}
+
+.text-small {
+  font-size: 0.9rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #f7e018; /* Solar yellow for hover */
+}
+
+.form-control {
+  background: #ffffff;
+  border-color: #28a745; /* Green border */
+}
+
+.form-control:focus {
+  background: #e8f5e9; /* Light green on focus */
+  border-color: #2ecc71; /* Lighter green */
+}
+
+footer {
+  background: #1a3c34; /* Dark green */
+}
+
+/* ==========================================
+      CUSTOM UTILS CLASSES
+    ========================================== */
+body,
+html {
+  height: 100%;
+}
